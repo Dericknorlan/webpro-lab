@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Pendaftaran</title>
+  </head>
+  <body>
+    <h1>Form Pendaftaran</h1>
+    <form>
+      <label for="nama">Nama &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; :</label>
+      <input
+        type="text"
+        id="nama"
+        name="nama"
+        required
+      /><br /><br />
+
+      <label for="password">Password &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287;&#8287;:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="tanggal_lahir">Tanggal Lahir &#8287; &#8287; &#8287;&#8287;:</label>
+      <input
+        type="text"
+        style="width: 30px"
+      />
+      <input
+        type="text"
+        style="width: 30px"
+      />
+      <input
+        type="text"
+        style="width: 30px"
+      />
+
+      <br /><br />
+
+      <label for="jenis_kelamin">Jenis Kelamin &#8287; &#8287; &#8287;&#8287;:</label>
+      <input
+        type="radio"
+        id="jenis_kelamin_laki"
+        name="jenis_kelamin"
+        value="laki-laki"
+      />
+      <label for="jenis_kelamin_laki">Laki-Laki</label>
+      <input
+        type="radio"
+        id="jenis_kelamin_perempuan"
+        name="jenis_kelamin"
+        value="perempuan"
+      />
+      <label for="jenis_kelamin_perempuan">Perempuan</label><br /><br />
+
+      <label for="jurusan">Jurusan &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287;:</label>
+      <select
+        id="jurusan"
+        name="jurusan"
+      >
+        <option value="jurusan_satu">IMT</option>
+        <option value="jurusan_dua">Jurusan 2</option>
+        <option value="jurusan_tiga">Jurusan 3</option></select
+      ><br /><br />
+
+      <label for="hobi">Hoby &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287;&#8287; &#8287;&#8287; &#8287;:</label>
+      <input
+        type="checkbox"
+        id="hobi_gaming"
+        name="hobi[]"
+        value="gaming"
+      />
+      Gaming
+      <input
+        type="checkbox"
+        id="hobi_traveling"
+        name="hobi[]"
+        value="traveling"
+      />
+      Traveling
+      <input
+        type="checkbox"
+        id="hobi_dengar_musik"
+        name="hobi[]"
+        value="dengar_musik"
+      />
+      Dengar Musik
+      <input
+        type="checkbox"
+        id="hobi_rebahan"
+        name="hobi[]"
+        value="rebahan"
+      />
+      Rebahan
+      <input
+        type="checkbox"
+        id="hobi_adventure"
+        name="hobi[]"
+        value="adventure"
+      />
+      Adventure
+      <input
+        type="checkbox"
+        id="hobi_lainnya"
+        name="hobi[]"
+        value="lainnya"
+      />
+      Lainnya<br /><br />
+
+      <label for="alamat">Alamat &#8287; &#8287;&#8287;&#8287;&#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287;:</label>
+      <textarea
+        id="alamat"
+        name="alamat"
+        rows="4"
+        cols="50"
+        required
+      ></textarea
+      ><br /><br />
+
+      <label for="semester">Semester &#8287; &#8287; &#8287; &#8287; &#8287; &#8287; &#8287;&#8287; :</label>
+      <select
+        id="semester"
+        name="semester"
+      >
+        <option value="semester_satu">Satu</option>
+        <option value="semester_dua">Dua</option>
+        <option value="semester_tiga">Tiga</option>
+        <option value="semester_empat">Empat</option>
+        <option value="semester_lima">Lima</option>
+        <option value="semester_enam">Enam</option></select
+      ><br /><br />
+
+      <input
+        type="submit"
+        value="Kirim"
+      />
+    </form>
+  </body>
+</html>
