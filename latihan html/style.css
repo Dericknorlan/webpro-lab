@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #ddd;
+    grid-gap: 30px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    flex: 1 0 30%;
+    margin: 10px;
+}
+
