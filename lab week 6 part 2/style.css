@@ -1,0 +1,121 @@
+.wrapper {
+  width: 600px;
+}
+
+.head {
+  width: 300px;
+  height: 280px;
+  margin-left: 12px;
+  border: 1px solid transparent;
+  background-color: #ffc0cb;
+  border-radius: 50%;
+}
+
+.earleft {
+  content: '';
+  position: absolute;
+  border-radius: 40%;
+  width: 0;
+  height: 50px;
+  border-right: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-top: 70px solid #f333d3;
+  transform: rotate(-20deg);
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.earright {
+  content: '';
+  position: absolute;
+  border-radius: 40%;
+  width: 0;
+  height: 50px;
+  border-right: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-top: 70px solid #f333d3;
+  margin-left: 195px;
+  transform: rotate(19deg);
+  margin-top: 10px;
+}
+
+.eyeleft {
+  width: 40px;
+  height: 40px;
+  margin-left: 20%;
+  margin-top: 35%;
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.eyeright {
+  width: 40px;
+  height: 40px;
+  margin-left: 60%;
+  margin-top: -14.5%;
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.ineyeleft {
+  width: 20px;
+  height: 20px;
+  margin-left: 32%;
+  margin-top: 8%;
+  border: 1px solid transparent;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.ineyeright {
+  width: 20px;
+  height: 20px;
+  margin-left: 28%;
+  margin-top: 6%;
+  border: 1px solid transparent;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.innoseleft {
+  width: 20px;
+  height: 20px;
+  margin-left: 15%;
+  margin-top: 20%;
+  border: 1px solid transparent;
+  background-color: #f333d3;
+  border-radius: 50%;
+}
+
+.innoseright {
+  width: 20px;
+  height: 20px;
+  margin-left: 65%;
+  margin-top: -20.5%;
+  border: 1px solid transparent;
+  background-color: #f333d3;
+  border-radius: 50%;
+}
+
+.snout {
+  width: 35%;
+  height: 20%;
+  margin-left: 30%;
+  margin-top: 3%;
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 45%;
+}
+
+.mouth {
+  width: 60px;
+  height: 50px;
+  border-bottom: 15px solid black;
+  border-radius: 70%;
+  position: relative;
+  display: block;
+  margin-top: -25px;
+  margin-left: 110px;
+}
