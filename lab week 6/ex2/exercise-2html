@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>ex 2 week6</title>
+    <link
+      rel="stylesheet"
+      href="ex2.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html"
+        ><img
+          src=""
+          alt="logo"
+          width="500"
+          height="500"
+          class="logo"
+      /></a>
+      <div class="nav">
+        <a href="#home">Beranda</a>
+        <a href="#about">Portfolio</a>
+        <a href="#Contact">Kontak Saya</a>
+      </div>
+    </nav>
+    <header>
+      <p>HEADER</p>
+    </header>
+    <article>
+      <p>ARTICLE</p>
+    </article>
+    <br />
+    <figure
+      class="figure"
+      id="figure1"
+    >
+      Figure 1
+    </figure>
+    <figure
+      class="figure"
+      id="figure2"
+    >
+      Figure 2
+    </figure>
+    <figure
+      class="figure"
+      id="figure3"
+    >
+      Figure 3
+    </figure>
+    <p><br /></p>
+
+    <footer>
+      <p>FOOTER</p>
+    </footer>
+  </body>
+</html>

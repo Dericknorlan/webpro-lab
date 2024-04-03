@@ -1,0 +1,120 @@
+html {
+  background-color: gray;
+}
+
+p {
+  text-align: center;
+}
+
+.article {
+  justify-content: space-between;
+  text-align: left;
+}
+
+header {
+  display: flex;
+  height: 10%;
+  background-color: orange;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.container1 {
+  display: flex;
+  margin: 10px;
+  margin-right: 4px;
+  height: 30%;
+}
+
+.article-container1 {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.headernav {
+  width: 98%;
+  margin: 10px;
+  background-color: yellow;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  margin: 10px;
+  margin-right: 4px;
+}
+
+.article-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  background-color: lightblue;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+section {
+  background-color: greenyellow;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.header {
+  background-color: azure;
+  margin-top: 0px;
+}
+
+footer {
+  background-color: lightsalmon;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+
+nav {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+  background-color: orange;
+  margin: 10px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+aside {
+  background-color: green;
+  width: 15%;
+  margin: 0%;
+  text-align: center;
+  font-size: larger;
+}
+
+figcaption {
+  background-color: gray;
+}
+
+footer {
+  background-color: orange;
+  height: 9%;
+  font-weight: bold;
+}
+
+.footernav {
+  width: 98%;
+  margin: 10px;
+  background-color: yellow;
+  justify-content: space-between;
+}
+
+.aside {
+  height: 100px;
+  float: right;
+  text-align: center;
+  font-size: large;
+}
