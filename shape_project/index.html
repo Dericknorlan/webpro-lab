@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Shape Manipulator</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        background-image: linear-gradient(to bottom right, #6c63ff, #ff5e7d);
+      }
+
+      .shapeContainerWrapper {
+        padding: 20px;
+        border: 1px solid #ccc;
+        width: 90%;
+        overflow-y: auto;
+        max-height: 500px;
+      }
+
+      .shapeContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        position: relative;
+        height: 375px;
+      }
+
+      .controls,
+      .shapeControls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .controls > *,
+      .shapeControls > * {
+        margin: 0 8px;
+      }
+
+      .shape {
+        margin-top: 10px;
+        width: 50px;
+        height: 50px;
+        display: none;
+        position: relative;
+        animation: slideInFromLeft 0.5s forwards; /* Animasi masuk dari kiri */
+      }
+
+      .circle {
+        border-radius: 50%;
+      }
+
+      .rotate {
+        transform: rotate(360deg);
+        transition: transform 0.5s ease-in-out;
+      }
+
+      @keyframes slideInFromLeft {
+        0% {
+          left: -100%; /* Mulai dari luar layar kiri */
+        }
+        100% {
+          left: 0; /* Posisi akhir di kiri container */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container to hold the shapes with scrollable functionality -->
+    <div class="shapeContainerWrapper">
+      <div class="shapeContainer"></div>
+    </div>
+
+    <!-- Controls for adding/removing shapes and customizing them -->
+    <div class="controls">
+      <!-- Button to add a shape -->
+      <button id="addShape">Add Shape</button>
+
+      <!-- Button to remove a shape -->
+      <button id="removeShape">Remove Shape</button>
+    </div>
+
+    <!-- Dropdown to select shape type -->
+    <div class="shapeControls">
+      <select id="shapeType">
+        <!-- Input for selecting shape color -->
+        <option value="square">Square</option>
+        <option value="circle">Circle</option>
+      </select>
+      <input
+        type="color"
+        id="shapeColor"
+      />
+      <!-- Input for specifying shape size -->
+      <input
+        type="number"
+        id="shapeSize"
+        placeholder="Size(px)"
+        min="10"
+        max="100"
+      />
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let animationInProgress = false; // Flag to prevent spamming animations
+
+        // Function to disable controls
+        function disableControls() {
+          $('#addShape').prop('disabled', true);
+          $('#removeShape').prop('disabled', true);
+        }
+
+        // Function to enable controls
+        function enableControls() {
+          $('#addShape').prop('disabled', false);
+          $('#removeShape').prop('disabled', false);
+        }
+
+        // Function to handle the click event of the "Add Shape" button
+        $('#addShape').click(function () {
+          if (animationInProgress) return; // Check if animation is in progress
+          animationInProgress = true; // Set animation in progress
+          disableControls(); // Disable controls
+
+          let shapeType = $('#shapeType').val(); // Get selected shape type
+          let shapeColor = $('#shapeColor').val(); // Get selected shape color
+          let shapeSize = $('#shapeSize').val() || 50; // Get specified shape size or default to 50px
+
+          let newShape = $('<div></div>'); // Create a new div element for the shape
+          newShape.addClass('shape'); // Add the 'shape' class to the new shape
+          newShape.addClass(shapeType); // Add the selected shape type class to the new shape
+          newShape.css({
+            // Set CSS properties for the new shape
+            'background-color': shapeColor,
+            width: shapeSize + 'px',
+            height: shapeSize + 'px',
+          });
+
+          $('.shapeContainer').append(newShape); // Append the new shape to the shape container
+          newShape.show(); // Show the new shape (it will slide in due to the 'slideIn' animation)
+          newShape.on('animationend', function () {
+            animationInProgress = false; // Set animation not in progress after animation completes
+            enableControls(); // Enable controls
+          });
+
+          // Add event listener to new shape for rotation and fade out effect
+          newShape.click(function () {
+            $(this).toggleClass('rotate'); // Toggle 'rotate' class on click
+            $(this).fadeOut(500, function () {
+              // Fade out animation for the shape
+              $(this).remove(); // Remove the shape from the DOM after fading out
+            });
+          });
+        });
+
+        // Function to handle the click event of the "Remove Shape" button
+        $('#removeShape').click(function () {
+          if (animationInProgress) return; // Check if animation is in progress
+          animationInProgress = true; // Set animation in progress
+          disableControls(); // Disable controls
+
+          let lastShape = $('.shape').last(); // Select the last shape added
+          lastShape.fadeOut(500, function () {
+            // Fade out animation for the last shape
+            $(this).remove(); // Remove the last shape from the DOM
+            animationInProgress = false; // Set animation not in progress after animation completes
+            enableControls(); // Enable controls
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
